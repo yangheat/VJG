@@ -1,0 +1,17 @@
+<script>
+    var a;
+    var b;
+    var answer = true;
+
+    while (answer != null) {
+        a = Math.floor(Math.random() * 9) + 1;
+        b = Math.floor(Math.random() * 9) + 1;
+        answer = prompt(a + " X " + b);
+        if (a * b == answer) {
+            alert("정답");
+        } else if(answer!=null) {
+            alert("오답(입력한 값:"+answer+")");
+        }
+    }
+    window.close();
+</script>
