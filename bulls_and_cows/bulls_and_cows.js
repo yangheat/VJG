@@ -28,10 +28,6 @@ function number_setting() {
 
 }
 
-function input_init(){
-    
-}
-
 var body = document.body;
 var answer = number_setting();
 var chk_count = 0;
