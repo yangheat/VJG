@@ -59,18 +59,18 @@ form.addEventListener("submit", function (e) {
 
     chk_count++;
 
-    if (strike === 0 && ball === 0) {
-        result.textContent = "아웃"
-    } else if(chk_count === 10){
-        result.textContent = "너무 많이 틀려 문제가 초기화됩니다."
-        chk_count=0;
+    if(strike === 3){
+        result.textContent = "정답입니다.";
         answer = number_setting();
+        chk_count = 0;
+    }else if(chk_count === 2){
+        result.textContent = "너무 많이 틀려 문제가 초기화됩니다.\n답은 "+answer[0]+answer[1]+answer[2]+"였습니다."
+        answer = number_setting();
+        chk_count = 0;
+    }else if (strike === 0 && ball === 0) {
+        result.textContent = "아웃";
     } else {
         result.textContent = strike + "S " + ball + "B";
-
-        if(strike === 3){
-            answer = number_setting();
-        }
     }
     input.value = "";
     input.focus();
