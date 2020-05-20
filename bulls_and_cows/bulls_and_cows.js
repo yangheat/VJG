@@ -63,7 +63,7 @@ form.addEventListener("submit", function (e) {
         result.textContent = "정답입니다.";
         answer = number_setting();
         chk_count = 0;
-    }else if(chk_count === 2){
+    }else if(chk_count === 5){
         result.textContent = "너무 많이 틀려 문제가 초기화됩니다.\n답은 "+answer[0]+answer[1]+answer[2]+"였습니다."
         answer = number_setting();
         chk_count = 0;
