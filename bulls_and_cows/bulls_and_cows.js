@@ -49,14 +49,10 @@ form.addEventListener("submit", function (e) {
     var strike = 0;
     var ball = 0;
     for (var i = 0; i < 3; i++) {
-        for (var j = 0; j < 3; j++) {
-            if (answer[j] === Number(input.value[i])) {
-                if (i === j) {
-                    strike++;
-                } else {
-                    ball++;
-                }
-            }
+        if( answer[i] === Number(input.value[i]) ){
+            strike++;
+        }else if( answer.indexOf(Number(input.value[i])) > -1 ){
+            ball++;
         }
     }
 
