@@ -1,5 +1,3 @@
-var body = document.body;
-
 function number_setting() {
     var number_candidate = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     var answer = []
@@ -30,7 +28,13 @@ function number_setting() {
 
 }
 
+function input_init(){
+    
+}
+
+var body = document.body;
 var answer = number_setting();
+var chk_count = 0;
 
 var result = document.createElement("h1");
 body.append(result);
@@ -46,6 +50,7 @@ form.append(button);
 // 비동기 콜백함수(Asynchronius Callback function)
 form.addEventListener("submit", function (e) {
     e.preventDefault();
+
     var strike = 0;
     var ball = 0;
     for (var i = 0; i < 3; i++) {
@@ -56,14 +61,25 @@ form.addEventListener("submit", function (e) {
         }
     }
 
+    chk_count++;
+
     if (strike === 0 && ball === 0) {
         result.textContent = "아웃"
+    } else if(chk_count === 10){
+        result.textContent = "너무 많이 틀려 문제가 초기화됩니다."
+        chk_count=0;
+        answer = number_setting();
     } else {
         result.textContent = strike + "S " + ball + "B";
 
         if(strike === 3){
-            answer = number_setting();             
+            answer = number_setting();
         }
     }
+    input.value = "";
+    input.focus();
+
+    
+    
 
 });
