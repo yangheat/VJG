@@ -7,3 +7,5 @@
 3. 숫자야구 (Bulls and Cows)
     1) 게임 방식 'https://namu.wiki/w/%EC%88%AB%EC%9E%90%EC%95%BC%EA%B5%AC' 참조
     2) 3S 인 경우 게임 재시작
+
+4. 로또 추첨기(Lotto Lottery)
