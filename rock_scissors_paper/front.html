@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>가위 바위 보</title>
+        <style>
+            #computer{
+                width: 284px;
+                height: 340px;
+                background: url("rock_scissors_paper.jpg") 0 0;
+            }
+            .result{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="computer"></div>
+        <div>
+            <button id="rock" class="btn">바위</button>
+            <button id="scissors" class="btn">가위</button>
+            <button id="paper" class="btn">보</button>
+        </div>
+        <table class="result">
+            <tr>
+                <td colspan="2" style="font-size: 40px"><b>결과</b></td>
+            </tr>
+            <tr>
+                <td>플레이어</td>
+                <td>컴퓨터</td>
+            </tr>
+            <tr>
+                <td id="user_select"></td>
+                <td id="computer_select"></td>
+            </tr>
+            <tr>
+                <td id="RSP_result" colspan="2"></td>
+            </tr>
+        </table>
+        <script src="rock_scissors_paper.js"></script>
+    </body>
+</html>

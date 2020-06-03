@@ -9,3 +9,5 @@
     2) 3S 인 경우 게임 재시작
 
 4. 로또 추첨기(Lotto Lottery)
+
+5. 가위바위보(Rock Scissors Paper)
